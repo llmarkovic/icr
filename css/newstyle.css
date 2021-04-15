@@ -1,0 +1,67 @@
+.logo {
+    width: 4em;
+    height: 3em;
+}
+
+.marketing {
+    margin-top: 4em;
+    margin-bottom: 4em;
+}
+
+.heading1 {
+    margin-bottom: 1.5em;
+}
+
+.heading2 {
+    margin: 0.5em 0em;
+}
+
+.featurette-divider {
+    margin-bottom: 2em;
+}
+
+footer {
+    background-color: #810000;
+    padding-top: 2em;
+    padding-bottom: 1em;
+    text-align: center;
+}
+
+.btt {
+    color: white;
+}
+
+.btt:hover {
+    color: thistle;
+}
+
+.ftext {
+    color: white;
+}
+
+.forma {
+    margin-top: 3em;
+}
+
+.smm {
+    margin-top: 0.5em;
+}
+
+.kontaktstrana {
+    margin-top: 9em;
+    background-color: #91091e;
+    color: whitesmoke;
+}
+
+.filmovi {
+    margin-top: 3em;
+}
+
+.faqstrana {
+    margin-top: 9em;
+}
+
+.n3 {
+    color: white;
+
+}
