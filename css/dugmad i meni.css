@@ -1,0 +1,17 @@
+.btns {
+  background-color: #91091e;
+  border: none;
+  color: white;
+}
+
+.btns:hover {
+  background-color: #810000;
+  color: white;
+}
+
+.meny {
+  background-color: #91091e;
+  color: white;
+  border-bottom: 1px solid #bd2000;
+}
+/*# sourceMappingURL=dugmad i meni.css.map */

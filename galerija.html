@@ -1,0 +1,403 @@
+<html lang="en">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <head>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/newstyle.css">
+    <link rel="stylesheet" href="css/galerija.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="css/dugmad i meni.css">
+    <title>HotCinema - Galerija</title>
+
+ </head>
+ <body class="kontaktstrana">
+		
+
+
+
+   <nav class="navbar navbar-expand-md navbar-dark fixed-top meny">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="pocetna.html"><img src="img/logo-removebg-preview.png" class="logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="pocetna.html">Početna</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="onama.html">O nama</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="galerija.html">Galerija</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="faq.html">Česta pitanja</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="kontakt.html">Kontakt</a>
+            </li>
+          </ul>
+          <!-- <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Pretrazi" aria-label="Pretrazi">
+            <button class="btn btn-outline-danger" type="submit">Traži</button>
+          </form> -->
+        </div>
+      </div>
+    </nav>
+
+
+
+
+
+
+      <div class="container marketing">
+    
+       
+
+        <div id="myModal" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="img01">
+          <div id="caption"></div>
+        </div>
+    
+        <div class="row featurette">
+          <div class="col-md-7">
+          </div>
+          <div class="col-md-5">
+            <img src="img/5.jpg" id="prva" style="width:500px;height: 500px;" alt="Sala 1">
+            <img src="img/3.jpg" id="druga" style="width:500px;height: 500px;" alt="Bioskop 2">
+          </div>
+        </div>
+    
+
+    
+        <div class="row featurette divgalerije">
+          <div class="col-md-7 order-md-2" id="experiment">
+          </div>
+          <div class="col-md-5 order-md-1">
+            <img src="img/6.jpg" id="treca"style="width:500px;height: 500px;" alt="Poster">
+            <img src="img/experiment2.jpg" id="cetvrta" style="width:500px;height: 500px;" alt="Skica vektor 2">
+          </div>
+          
+        </div>
+    
+
+    
+        <div class="row featurette divgalerije">
+          <div class="col-md-7">
+          </div>
+          <div class="col-md-5">
+            <img src="img/2.jpg" id="peta" style="width:500px;height: 500px;" alt="Bar bioskopa">
+            <img src="img/4.jpg" id="sesta" style="width:500px;height: 500px;" alt="Hrana 2">
+            
+          </div>
+          
+          <div class="row featurette divgalerije">
+            <div class="col-md-7 order-md-2" id="experiment">
+            </div>
+            <div class="col-md-5 order-md-1">
+              <img src="img/experiment.jpg" id="sedma"style="width:500px;height: 500px;" alt="Sala 2"><br><br><br><br><br><br>
+              <img src="img/experiment2.jpg" id="osma" style="width:500px;height: 500px;" alt="Skica vektor 2">
+            </div>
+          </div>
+                    <div class="row featurette divgalerije" style="margin-top: -50em;">
+                              <div class="col-md-7">
+                              </div>
+                              <div class="col-md-5">
+                                <img src="img/1.jpg" id="deveta" style="width:500px;height: 500px;" alt="Sala 1"><br><br><br><br><br><br>
+                                <img src="img/3.jpg" id="deseta" style="width:500px;height: 500px;" alt="Ulaz">
+                              </div>
+                            </div>
+        </div>
+
+        
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+   <footer class="container-fluid">
+     <p class="float-end"><a href="#" class="btt">Back to top</a></p>
+     <p class="ftext">© 2017–2021 HotCinema · <a href="https://policies.google.com/privacy?hl=en-US">Privacy</a> · <a href="https://policies.google.com/privacy?hl=en-US">Terms</a></p>
+   </footer>
+
+
+   
+
+   <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+
+   <script>
+    $(document).on("scroll", function(){
+  if
+    ($(document).scrollTop() > 100){
+    $("nav").addClass("shrink");
+  }
+  else
+  {
+    $("nav").removeClass("shrink");
+    $("nav").addClass("povecanje");
+  }
+});
+
+  $(document).ready(function(){
+
+  $('body').css('display', 'none');
+  $('body').fadeIn(1000);
+
+  });
+
+  $("#druga").hide();
+  $("#cetvrta").hide();
+  $("#sesta").hide();
+
+  var x=0;
+  var y=0;
+  var z=0;
+
+  $( "#klik1" ).click(function() {
+      x++;
+      $( "#druga" ).slideDown(1200).delay(300);
+      $("#prva").slideUp(1200);
+      if(x>1){
+          $( "#druga" ).slideUp(1200);
+          $("#prva").slideDown(1200).delay(300);
+          x=0;
+      }
+});
+
+$( "#klik2" ).click(function() {
+      y++;
+      $("#treca").slideUp(1000);
+      $( "#cetvrta" ).fadeIn(1200);
+      if(y>1){
+          $( "#cetvrta" ).slideUp(1000);
+          $("#treca").slideDown (1200).delay(1000);
+          y=0;
+      }
+});
+
+$( "#klik3" ).click(function() {
+      z++;
+      $("#peta").animate({
+  left: '250px',
+  opacity: '0.5',
+  height: '150px',
+  width: '150px'});
+      $( "#sesta" ).animate({
+  right: '250px',
+  opacity: '1',
+  height: '500px',
+  width: '500px'});
+      if(z>1){
+          $( "#sesta" ).animate({
+  left: '250px',
+  opacity: '0.5',
+  height: '150px',
+  width: '150px'});
+          $("#peta").animate({
+  right: '250px',
+  opacity: '1',
+  height: '500px',
+  width: '500px'});
+          z=0;
+      }
+});
+
+// Otvaranje slika
+
+var modal = document.getElementById("myModal");
+
+var img = document.getElementById("prva");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+modal.style.display = "block";
+modalImg.src = this.src;
+captionText.innerHTML = this.alt;
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() { 
+modal.style.display = "none";
+}
+
+
+var modal = document.getElementById("myModal");
+
+var img = document.getElementById("druga");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+modal.style.display = "block";
+modalImg.src = this.src;
+captionText.innerHTML = this.alt;
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() { 
+modal.style.display = "none";
+}
+
+var modal = document.getElementById("myModal");
+
+var img = document.getElementById("treca");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+modal.style.display = "block";
+modalImg.src = this.src;
+captionText.innerHTML = this.alt;
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() { 
+modal.style.display = "none";
+}
+
+var modal = document.getElementById("myModal");
+
+var img = document.getElementById("cetvrta");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+modal.style.display = "block";
+modalImg.src = this.src;
+captionText.innerHTML = this.alt;
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() { 
+modal.style.display = "none";
+}
+
+var modal = document.getElementById("myModal");
+
+var img = document.getElementById("peta");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+modal.style.display = "block";
+modalImg.src = this.src;
+captionText.innerHTML = this.alt;
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() { 
+modal.style.display = "none";
+}
+
+var modal = document.getElementById("myModal");
+
+var img = document.getElementById("sesta");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+modal.style.display = "block";
+modalImg.src = this.src;
+captionText.innerHTML = this.alt;
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() { 
+modal.style.display = "none";
+}
+
+$(document).ready(function(){
+$('[data-toggle="tooltip"]').tooltip();   
+});
+
+
+
+var modal = document.getElementById("myModal");
+
+var img = document.getElementById("sedma");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+modal.style.display = "block";
+modalImg.src = this.src;
+captionText.innerHTML = this.alt;
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() { 
+modal.style.display = "none";
+}
+
+
+var modal = document.getElementById("myModal");
+
+var img = document.getElementById("osma");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+modal.style.display = "block";
+modalImg.src = this.src;
+captionText.innerHTML = this.alt;
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() { 
+modal.style.display = "none";
+}
+
+
+
+
+var modal = document.getElementById("myModal");
+
+var img = document.getElementById("deveta");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+modal.style.display = "block";
+modalImg.src = this.src;
+captionText.innerHTML = this.alt;
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() { 
+modal.style.display = "none";
+}
+
+
+var modal = document.getElementById("myModal");
+
+var img = document.getElementById("deseta");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+modal.style.display = "block";
+modalImg.src = this.src;
+captionText.innerHTML = this.alt;
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() { 
+modal.style.display = "none";
+}
+// Kraj otvaranja slika
+  </script>
+    
+</body>
+</html>

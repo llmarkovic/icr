@@ -1,0 +1,31 @@
+$boja1: #810000;
+$boja2: #91091e;
+$boja3: white;
+
+
+@mixin btnsstyle {
+    background-color: $boja2;
+    border: none;
+    color: $boja3;
+}
+
+@mixin btnsstylehover {
+    background-color: $boja1;
+    color: $boja3;
+}
+
+
+
+.btns {
+    @include btnsstyle();
+}
+
+.btns:hover {
+    @include btnsstylehover();
+}
+
+.meny {
+    background-color: $boja2;
+    color: $boja3;
+    border-bottom: 1px solid #bd2000;
+}
